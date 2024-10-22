@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        form {
+            border: 1px solid blue;
+            max-width: 10000px;
+            padding: 50px;
+            
+        }
+
+        label {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            height: 25px;
+            font-size: 1.5em;
+            color: #c0c0c0;
+            margin-bottom: 15px;
+        }
+
+        button {
+
+            width: 100%;
+            height: 50px;
+            background-color: lightgreen;
+            color: white;
+            font-size: 1.75em;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 20px;
+        }
+
+        #checks input {
+            width: 15%
+        }
+
+        #checks {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+
+        }
+        .links{
+width: fit-content;
+ float: right;
+   height: min-content;
+    background-color: yellow;
+    margin-left: 1750px;
+    border-radius: 20px;
+}
+
+.links-container {
+            border: white;
+            margin: 20px 0;
+            font-size: 20px;
+            position: absolute; /* Permite mover livremente */
+            top:1050px; /* Ajuste este valor para mover verticalmente */
+            right: 40%;
+                      /* Ajuste este valor para mover horizontalmente */
+        }
+    </style>
+</head>
+<body>
+<h1>Atividade para fixação criar uma página de pedidos para uma lanchonete</h1>
+<form action="#" method="post">
+    <label for="FirstName">First</label>
+    <input type="text" id="FirstName"/>
+    <br><br>
+    <label for="LastName">Last</label>
+    <input type="text" id="LastName"/><br><br>
+    <label for="email">email</label>
+    <input type="email" id="email"/><br><br>
+    <label for="ingredientes do sanduiche">ingredientes do sanduiche:</label>
+    <br><br>
+
+
+    <?php if ( isset($ingredientes['queijos'])): ?>
+        <label for="queijos">queijos</label>
+        <select id="queijos">
+            <option value="">Selecione</option>
+                <?php  foreach ($ingredientes['queijos'] as $queijo):?>
+                    <option value="<?=$queijo?>"><?=$queijo?></option>
+                <?php  endforeach ;?>
+        </select>
+    <?php endif; ?>
+
+
+
+
+
+    <br> <label for="carnes">carnes</label>
+    <select id="carnes">
+        <option value="presunto">Presunto</option>
+        <option value="mortandela">Mortandela</option>
+        <option value="peito_de_frango">Peito de frango</option>
+        <br>
+    </select>
+    <br> <label for="pãos">pãos</label>
+    <br> <select id="paõs">
+        <option value="de forma">Pão de forma</option>
+        <option value="de arroz">Pão de arroz</option>
+        <option value="de hamburguer">Pão de hamburguer</option>
+        <option value="de cachorro quente">Pão de cachorro quente</option>
+    </select>
+    <br> <label for="saladas">saladas</label>
+    <br> <select id="saladas">
+        <option value="alface">Alface</option>
+        <option value="rúcula">Rúcula</option>
+        <option value="tomate">Tomate</option>
+    </select>
+    <br> <label for="molhos">molhos</label>
+    <br> <select id="molhos">
+        <option value="maionese">Maionese</option>
+        <option value="ketchup">Ketchup</option>
+        <option value="mostarda">Mostarda</option>
+    </select>
+    <p id="mensagem"></p> <!-- Local onde a mensagem aparecerá -->
+
+
+    <div id="checks">
+        <label for="Refris">Refris</label>
+        <br> <input type="checkbox" id="inetrest" value="Coca">Coca
+        <br> <input type="checkbox" id="inetrest" value="Pepsi">Pepsi
+        <br> <input type="checkbox" id="inetrest" value="Sprite">Sprite
+        <br> <input type="checkbox" id="inetrest" value="Fanta">Fanta
+    </div>
+    <br><label for="doh">Date of Hire</label>
+    <input type="date" id="doh"/>
+    <button type="submit">Submit Data</button>
+    <div class="links-container">
+        <ol>
+            <a href="http://127.0.0.1:5500/trabalhojohnes.html">Ínício</a>
+            <a href="http://127.0.0.1:5500/langauges2.html">Languages</a>
+            <a href="curiosidades.html">Curiosidades</a>
+            <a href="personalinformation.html">Portfólio</a>
+        </ol>
+    </div>
+</form>
+</body>
+</html>

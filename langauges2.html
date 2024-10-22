@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .cor1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            text-align: center;
+            color: green;
+        }
+        .cor2 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: red;
+        }
+
+        .cor3, .cor4 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left; /* Alinha o texto à esquerda para melhor visualização com as bandeiras */
+            display: flex; /* Usando flexbox para alinhar a imagem e o texto */
+            align-items: center; /* Centraliza verticalmente o conteúdo */
+            margin: 10px 0; /* Espaçamento entre as linhas */
+        }
+
+        .cor3 {
+            font-size: 120px;
+            color: green;
+        }
+
+        .cor4 {
+            font-size: 150px;
+            color: red;
+        }
+
+        /* Mantém os links no fluxo natural da página */
+        .links-container {
+            border: white;
+            margin: 20px 0;
+            font-size: 30px;
+            position: absolute; /* Permite mover livremente */
+            top: 338px; /* Ajuste este valor para mover verticalmente */
+            right: 1%; /* Ajuste este valor para mover horizontalmente */
+        }
+
+        .links {
+            display: block;
+            background-color: yellow;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 5px;
+            font-size: 60px;
+            float: right;
+        }
+
+        .imagem {
+            width: 100px; /* Define a largura da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+            margin-right: 20px; /* Espaçamento à direita da imagem */
+        }
+        .imagem2 {
+            width: 100px; /* Define a largura da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+            margin-right: 20px; /* Espaçamento à direita da imagem */
+        }
+
+    </style>
+</head>
+<body>
+   <h1 class="cor1">Línguas</h1>
+   <h1 class="cor2">Faladas:</h1>
+   <br><br>
+
+   <div class="cor3">
+       <img class="imagem" src="bandeirabr.png" alt="Bandeira Portuguesa">
+       <span>Português Brasileiro: Nativo</span>
+   </div>
+
+   <div class="cor4">
+       <img class="imagem2" src="bandeiraeua.png" alt="Bandeira Inglesa">
+       <span>Inglês: Fluente</span>
+   </div>
+
+   <!-- Container para os links -->
+   <div class="links-container">
+        <ol>
+            <li><a href="http://127.0.0.1:5500/trabalhojohnes.html">Ínício</a></li>
+            <li><a href="http://127.0.0.1:5500/langauges2.html">Languages</a></li>
+            <li><a href="curiosidades.html">Curiosidades</a></li>
+            <li><a href="personalinformation.html">Portfólio</a></li>
+        </ol>
+    </div>
+</body>
+</html>
